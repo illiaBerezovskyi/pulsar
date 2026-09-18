@@ -197,6 +197,7 @@ h1, h2, h3 {
   font-weight: 700;
   font-size: 19px;
   letter-spacing: -0.02em;
+  white-space: nowrap;
 }
 
 .logo__sub {
@@ -1275,7 +1276,9 @@ input[type='range']::-moz-range-thumb {
   }
 }
 
-@media (max-width: 640px) {
+/* Five nav links plus the CTA stop fitting well before the phone breakpoint,
+   so the menu collapses into the burger already on small laptops. */
+@media (max-width: 900px) {
   .header__cta {
     display: none;
   }
@@ -1289,6 +1292,7 @@ input[type='range']::-moz-range-thumb {
     gap: 0;
     background: var(--surface);
     border-bottom: 1px solid var(--border);
+    box-shadow: var(--shadow);
     display: none;
   }
 
@@ -1305,7 +1309,9 @@ input[type='range']::-moz-range-thumb {
     display: flex;
     margin-left: auto;
   }
+}
 
+@media (max-width: 640px) {
   section {
     padding: 58px 0;
   }
